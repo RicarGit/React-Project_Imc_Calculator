@@ -1,11 +1,8 @@
 * {
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .headerContainer {
@@ -23,10 +20,11 @@ body {
 }
 .leftSide {
   flex: 1;
-  margin-left: 40px;
+  margin-right: 40px;
 }
 .leftSide h1 {
   font-size: 40px;
+  margin-bottom: 20px;
   color: #3A4B5C;
 }
 .leftSide p {
@@ -59,7 +57,9 @@ body {
   opacity: .8;
 }
 .rightSide {
-flex: 1;
-margin-right: 40px;
-background-color: yellowgreen;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  flex: 1;
+  margin-left: 40px;
 }

@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import styles from './App.module.css'
 import logo from './assets/powered.png'
+import { levels, calculateImc } from './helpers/imc'
+import up from './assets/up.png'
+import down from './assets/down.png'
+// import leftArrow from './assets/leftarrow.png'
 
 function App() {
   const [heightField, setHeightField] = useState(0)
@@ -8,10 +12,11 @@ function App() {
 
   const handleCalculateButton = () => {
     if (heightField && weightField) {
-      return
+      return console.log(calculateImc(heightField, weightField))
     }
 
     alert('Algo deu errado...')
+    return
   }
 
   return (
@@ -22,7 +27,7 @@ function App() {
       </header>
 
       <main className={styles.mainContainer}>
-        <div className={styles.leftSide}>
+        <section className={styles.leftSide}>
           <h1>Calcule o seu IMC.</h1>
           <p>
             IMC é a sigla para Índice de Massa Corpórea, parâmetro
@@ -42,11 +47,38 @@ function App() {
             onChange={e => setWeightField(e.target.valueAsNumber)}
           />
           <button onClick={handleCalculateButton}>Calcular</button>
-        </div>
+        </section>
 
-        <div className={styles.rightSide}>
-          Content 2
-        </div>
+        <section className={styles.rightSide}>
+          {levels.map(({ title, color, icon, imc }, index) => {
+            const [minImcValue, maxImcValue] = imc
+
+            return (
+              <div key={index} style={{
+                display: "flex",
+                flexDirection: "column",
+                fontWeight: "bolder",
+                fontSize: "27px",
+                backgroundColor: color,
+                color: "#fff",
+                borderRadius: "10px",
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <img src={icon === 'up' ? up : down} style={{
+                  width: "60px",
+                  height: "60px",
+                  padding: "10px",
+                  marginBottom: "20px",
+                  borderRadius: "20%"
+                }} alt="" />
+                <h5 style={{ marginBottom: "15px" }}>{title}</h5>
+                <p style={{ fontSize: "13px" }}>
+                  {`IMC está entre ${minImcValue} e ${maxImcValue}`}
+                </p>
+              </div>)
+          })}
+        </section>
 
       </main >
     </div >
