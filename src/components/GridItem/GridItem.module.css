@@ -1,0 +1,32 @@
+.boxItem {
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxThumbIcon {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbIcon {
+  width: 30px;
+}
+
+.boxTitle {
+  margin-bottom: 10px;
+}
+
+.boxText {
+  font-size: 13px;
+}
