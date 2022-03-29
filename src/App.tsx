@@ -1,10 +1,8 @@
 import { useState } from 'react';
+import { levels, calculateImc } from './helpers/imc'
 import styles from './App.module.css'
 import logo from './assets/powered.png'
-import { levels, calculateImc } from './helpers/imc'
-import up from './assets/up.png'
-import down from './assets/down.png'
-// import leftArrow from './assets/leftarrow.png'
+import GridItem from './components/GridItem/GridItem';
 
 function App() {
   const [heightField, setHeightField] = useState(0)
@@ -15,7 +13,7 @@ function App() {
       return console.log(calculateImc(heightField, weightField))
     }
 
-    alert('Algo deu errado...')
+    alert('Digite seu peso e sua altura para calcular o seu IMC.')
     return
   }
 
@@ -50,34 +48,9 @@ function App() {
         </section>
 
         <section className={styles.rightSide}>
-          {levels.map(({ title, color, icon, imc }, index) => {
-            const [minImcValue, maxImcValue] = imc
-
-            return (
-              <div key={index} style={{
-                display: "flex",
-                flexDirection: "column",
-                fontWeight: "bolder",
-                fontSize: "27px",
-                backgroundColor: color,
-                color: "#fff",
-                borderRadius: "10px",
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}>
-                <img src={icon === 'up' ? up : down} style={{
-                  width: "60px",
-                  height: "60px",
-                  padding: "10px",
-                  marginBottom: "20px",
-                  borderRadius: "20%"
-                }} alt="" />
-                <h5 style={{ marginBottom: "15px" }}>{title}</h5>
-                <p style={{ fontSize: "13px" }}>
-                  {`IMC está entre ${minImcValue} e ${maxImcValue}`}
-                </p>
-              </div>)
-          })}
+          {levels.map((item, index) => (
+            <GridItem key={index} item={item} />
+          ))}
         </section>
 
       </main >
