@@ -20,7 +20,7 @@
 }
 .leftSide {
   flex: 1;
-  margin-right: 40px;
+  margin-right: 50px;
 }
 .leftSide h1 {
   font-size: 40px;
@@ -44,7 +44,7 @@
 .leftSide button {
   width: 100%;
   padding: 15px 0;
-  margin-top: 30px;
+  margin-top: 50px;
   font-size: 15px;
   background-color: #227C9D;
   color: #fff;
@@ -61,5 +61,5 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   flex: 1;
-  margin-left: 40px;
+  margin-left: 50px;
 }
