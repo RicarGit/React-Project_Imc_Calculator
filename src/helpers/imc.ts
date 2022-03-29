@@ -1,3 +1,10 @@
+type Level = {
+  title: string,
+  color: string,
+  icon: string,
+  imc: number[]
+}
+
 const levels = [
   { title: 'Magreza', color: '#96A3AB', icon: 'down', imc: [0, 18.5] },
   { title: 'Normal', color: '#0EAD69', icon: 'up', imc: [18.6, 24.9] },
@@ -21,4 +28,4 @@ const calculateImc = (height: number, weight: number) => {
   return result
 }
 
-export { levels, calculateImc }
+export { levels, calculateImc, type Level }
