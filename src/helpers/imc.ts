@@ -2,7 +2,7 @@ type Level = {
   title: string,
   color: string,
   icon: 'up' | 'down',
-  imc: number[]
+  imc: [number, number]
 }
 
 const levels: Level[] = [
