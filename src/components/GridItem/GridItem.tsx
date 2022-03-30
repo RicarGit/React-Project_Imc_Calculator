@@ -8,11 +8,11 @@ type Props = {
 }
 
 function GridItem({ item }: Props) {
-  const { title, color, icon, imc } = item
+  const { title, backgroundColor, icon, imc } = item
   const [minImcValue, maxImcValue] = imc
 
   return (
-    <div className={styles.boxItem} style={{ backgroundColor: color }}>
+    <div className={styles.boxItem} style={{ backgroundColor }}>
       <figure className={styles.boxThumbIcon}>
         <img className={styles.thumbIcon} src={icon === 'up' ? up : down} alt="thumbs_image" />
       </figure>
