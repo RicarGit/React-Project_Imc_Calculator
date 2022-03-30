@@ -63,3 +63,9 @@
   flex: 1;
   margin-left: 50px;
 }
+.rightSideBig {
+  display: grid;
+  grid-template-columns: none;
+  flex: 1;
+  margin-left: 50px;
+}

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { levels, calculateImc } from './helpers/imc'
+import { levels, calculateImc, Level } from './helpers/imc'
 import styles from './App.module.css'
 import logo from './assets/powered.png'
 import GridItem from './components/GridItem/GridItem';
@@ -7,10 +7,11 @@ import GridItem from './components/GridItem/GridItem';
 function App() {
   const [heightField, setHeightField] = useState(0)
   const [weightField, setWeightField] = useState(0)
+  const [toShow, setToShow] = useState<Level | null>(null)
 
   const handleCalculateButton = () => {
     if (heightField && weightField) {
-      return console.log(calculateImc(heightField, weightField))
+      return setToShow(calculateImc(heightField, weightField))
     }
 
     alert('Digite seu peso e sua altura para calcular o seu IMC.')
@@ -47,15 +48,16 @@ function App() {
           <button onClick={handleCalculateButton}>Calcular</button>
         </section>
 
-        <section className={styles.rightSide}>
-          {levels.map((item, index) => (
+        <section className={!toShow ? styles.rightSide : styles.rightSideBig}>
+          {!toShow && levels.map((item, index) => (
             <GridItem key={index} item={item} />
           ))}
+          {toShow && <GridItem item={toShow} />}
         </section>
 
       </main >
     </div >
-  );
+  )
 }
 
 export default App;
