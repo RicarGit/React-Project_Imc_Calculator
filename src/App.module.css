@@ -9,6 +9,7 @@
   max-width: 1200px;
   margin: 40px auto;
 }
+
 .logo {
   width: 150px;
 }
@@ -18,20 +19,24 @@
   margin: 0 auto;
   display: flex;
 }
+
 .leftSide {
   flex: 1;
   margin-right: 50px;
 }
+
 .leftSide h1 {
   font-size: 40px;
   margin-bottom: 20px;
   color: #3A4B5C;
 }
+
 .leftSide p {
   margin-bottom: 40px;
   font-size: 16px;
   color: #6A7D8B;
 }
+
 .leftSide input {
   width: 100%;
   border: none;
@@ -41,6 +46,7 @@
   font-size: 14px;
   outline: none;
 }
+
 .leftSide button {
   width: 100%;
   padding: 15px 0;
@@ -53,9 +59,11 @@
   cursor: pointer;
   transition: all ease .3s;
 }
+
 .leftSide button:hover {
   opacity: .8;
 }
+
 .rightSide {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -63,6 +71,7 @@
   flex: 1;
   margin-left: 50px;
 }
+
 .rightSideBig {
   display: grid;
   grid-template-columns: none;

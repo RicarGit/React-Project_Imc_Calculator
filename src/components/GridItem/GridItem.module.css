@@ -19,14 +19,40 @@
   justify-content: center;
 }
 
+.boxThumbIconBigger {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .thumbIcon {
   width: 30px;
+}
+
+.thumbIconBigger {
+  width: 60px;
 }
 
 .boxTitle {
   margin-bottom: 10px;
 }
 
+.boxTitleBigger {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
 .boxText {
   font-size: 13px;
+  letter-spacing: 0.2px;
+}
+
+.boxTextBigger {
+  font-size: 20px;
+  letter-spacing: 0.5px;
 }
