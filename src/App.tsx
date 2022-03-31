@@ -52,7 +52,7 @@ function App() {
           {!toShow && levels.map((item, index) => (
             <GridItem key={index} item={item} />
           ))}
-          {toShow && <GridItem item={toShow} />}
+          {toShow && <GridItem item={toShow} children={toShow.imcResult} />}
         </section>
 
       </main >

@@ -2,7 +2,8 @@ type Level = {
   title: string,
   backgroundColor: string,
   icon: 'up' | 'down',
-  imc: [number, number]
+  imc: [number, number],
+  imcResult?: number
 }
 
 const levels: Level[] = [
@@ -13,12 +14,13 @@ const levels: Level[] = [
 ]
 
 const calculateImc = (height: number, weight: number) => {
-  const imcLevel = parseFloat((weight / (height * 2)).toFixed(1))
+  const imcCalcResult = parseFloat((weight / (height * 2)).toFixed(1))
 
   const [result] = levels.filter(level => {
     const [minValue, maxValue] = level.imc
 
-    if (imcLevel >= minValue && imcLevel < maxValue) {
+    if (imcCalcResult >= minValue && imcCalcResult < maxValue) {
+      level.imcResult = imcCalcResult
       return true
     }
 
