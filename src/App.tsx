@@ -14,8 +14,7 @@ function App() {
       return setToShow(calculateImc(heightField, weightField))
     }
 
-    alert('Digite seu peso e sua altura para calcular o seu IMC.')
-    return
+    return alert('Digite seu peso e sua altura para calcular o seu IMC.')
   }
 
   return (
@@ -52,7 +51,7 @@ function App() {
           {!toShow && levels.map((item, index) => (
             <GridItem key={index} item={item} />
           ))}
-          {toShow && <GridItem item={toShow} children={toShow.imcResult} />}
+          {toShow && <GridItem item={toShow} setToShow={setToShow} setHeight={setHeightField} setWeight={setWeightField} />}
         </section>
 
       </main >
