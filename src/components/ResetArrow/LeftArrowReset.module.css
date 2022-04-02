@@ -1,0 +1,16 @@
+.leftArrowContainer {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  left: -35px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background-color: #227C9D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leftArrow {
+  width: 30px;
+}
