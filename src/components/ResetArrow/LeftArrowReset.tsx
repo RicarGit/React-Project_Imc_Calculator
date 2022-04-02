@@ -2,6 +2,7 @@ import styles from './LeftArrowReset.module.css'
 import leftArrow from '../../assets/leftarrow.png'
 import { Level } from '../../helpers/imc'
 
+//Setting the tipes to any for now until i find proper type for it
 type States = {
   item: Level,
   setToShow: any,

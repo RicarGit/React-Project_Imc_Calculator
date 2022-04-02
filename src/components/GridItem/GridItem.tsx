@@ -4,6 +4,7 @@ import styles from './GridItem.module.css'
 import LeftArrowReset from '../ResetArrow/LeftArrowReset'
 import { Level } from '../../helpers/imc'
 
+//Setting the tipes to any for now until i find proper type for it
 type Props = {
   item: Level,
   setToShow?: any,
