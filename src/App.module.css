@@ -47,6 +47,10 @@
   outline: none;
 }
 
+.leftSide input:disabled {
+  opacity: .5;
+}
+
 .leftSide button {
   width: 100%;
   padding: 15px 0;
@@ -62,6 +66,11 @@
 
 .leftSide button:hover {
   opacity: .8;
+}
+
+.leftSide button:disabled {
+  opacity: .5;
+  cursor: default;
 }
 
 .rightSide {
