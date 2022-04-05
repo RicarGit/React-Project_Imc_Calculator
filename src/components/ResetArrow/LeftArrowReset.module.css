@@ -17,8 +17,20 @@
 }
 
 
-@media (max-width: 770px) {
+@media (max-width: 870px) {
   .leftArrowContainer {
     left: -15px;
+  }
+}
+
+
+@media (max-width: 470px) {
+  .leftArrowContainer {
+    height: 60px;
+    width: 60px;
+  }
+
+  .leftArrow {
+    width: 23px;
   }
 }

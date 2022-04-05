@@ -93,7 +93,7 @@
 }
 
 
-@media (max-width: 770px) {
+@media (max-width: 870px) {
   .headerContainer {
     margin-left: 20px;
   }
@@ -120,5 +120,21 @@
 
   .rightSideBig {
     margin: 50px 0 0 0;
+  }
+}
+
+@media (max-width: 470px) {
+  .headerContainer {
+    margin: 20px;
+  }
+
+  .rightSide {
+    margin: 30px 0 30px 0;
+    grid-template-columns: none;
+    gap: 15px;
+  }
+
+  .rightSideBig {
+    margin: 30px 0 20px 0
   }
 }
