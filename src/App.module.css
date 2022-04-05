@@ -47,8 +47,12 @@
   outline: none;
 }
 
+.leftSide input::placeholder {
+  opacity: .3;
+}
+
 .leftSide input:disabled {
-  opacity: .5;
+  opacity: .3;
 }
 
 .leftSide button {
@@ -69,7 +73,7 @@
 }
 
 .leftSide button:disabled {
-  opacity: .5;
+  opacity: .3;
   cursor: default;
 }
 
@@ -86,4 +90,35 @@
   grid-template-columns: none;
   flex: 1;
   margin-left: 50px;
+}
+
+
+@media (max-width: 770px) {
+  .headerContainer {
+    margin-left: 20px;
+  }
+
+  .mainContainer {
+    margin: 0 20px;
+    flex-direction: column;
+  }
+
+  .leftSide,
+  .leftSide input {
+    margin: 0;
+    text-align: center;
+  }
+
+  .leftSide button {
+    margin-top: 20px;
+  }
+
+  .rightSide {
+    margin: 50px 0 0 0;
+    width: 100%;
+  }
+
+  .rightSideBig {
+    margin: 50px 0 0 0;
+  }
 }

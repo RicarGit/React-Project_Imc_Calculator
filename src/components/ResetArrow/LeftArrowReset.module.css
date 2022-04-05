@@ -15,3 +15,10 @@
 .leftArrow {
   width: 30px;
 }
+
+
+@media (max-width: 770px) {
+  .leftArrowContainer {
+    left: -15px;
+  }
+}
