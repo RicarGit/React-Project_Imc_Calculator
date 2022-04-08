@@ -4,15 +4,14 @@ import styles from './GridItem.module.css'
 import LeftArrowReset from '../ResetArrow/LeftArrowReset'
 import { Level } from '../../helpers/imc'
 
-//Setting the tipes to any for now until i find proper type for it
 type Props = {
   item: Level,
-  setToShow?: any,
-  setHeight?: any,
-  setWeight?: any
+  toShow?: (toShow: Level | null) => void,
+  height?: (height: number) => void,
+  weight?: (weight: number) => void
 }
 
-function GridItem({ item, setToShow, setHeight, setWeight }: Props) {
+function GridItem({ item, toShow, height, weight }: Props) {
   const { title, backgroundColor, icon, imc, imcResult } = item
   const [minImcValue, maxImcValue] = imc
 
@@ -26,9 +25,9 @@ function GridItem({ item, setToShow, setHeight, setWeight }: Props) {
         ? <p className={styles.boxTextBigger}>O valor do seu IMC é: <strong>{imcResult} Kg/m²</strong></p>
         : <p className={styles.boxText}>IMC está entre <strong>{minImcValue}</strong> e <strong>{maxImcValue}</strong></p>
       }
-      {imcResult && <LeftArrowReset item={item} setToShow={setToShow} setHeight={setHeight} setWeight={setWeight} />}
+      {imcResult && <LeftArrowReset item={item} setToShow={toShow} setHeight={height} setWeight={weight} />}
     </div>
   )
 }
 
-export default GridItem
+export { GridItem, type Props }

@@ -2,12 +2,16 @@ import { useState } from 'react';
 import { levels, calculateImc, Level } from './helpers/imc'
 import styles from './App.module.css'
 import logo from './assets/powered.png'
-import GridItem from './components/GridItem/GridItem';
+import { GridItem } from './components/GridItem/GridItem';
 
 function App() {
   const [heightField, setHeightField] = useState(0)
   const [weightField, setWeightField] = useState(0)
   const [toShow, setToShow] = useState<Level | null>(null)
+
+  const handleHeight = (height: number) => setHeightField(height)
+  const handleWeight = (weight: number) => setWeightField(weight)
+  const handleToShow = (level: Level | null) => setToShow(level)
 
   const handleCalculateButton = () => {
     if (heightField && weightField) {
@@ -53,7 +57,7 @@ function App() {
           {!toShow && levels.map((item, index) => (
             <GridItem key={index} item={item} />
           ))}
-          {toShow && <GridItem item={toShow} setToShow={setToShow} setHeight={setHeightField} setWeight={setWeightField} />}
+          {toShow && <GridItem item={toShow} toShow={handleToShow} height={handleHeight} weight={handleWeight} />}
         </section>
 
       </main >
