@@ -6,9 +6,9 @@ import { Level } from '../../helpers/imc'
 
 type Props = {
   item: Level,
-  toShow?: (toShow: Level | null) => void,
-  height?: (height: number) => void,
-  weight?: (weight: number) => void
+  toShow: (toShow: Level | null) => void,
+  height: (height: number) => void,
+  weight: (weight: number) => void
 }
 
 function GridItem({ item, toShow, height, weight }: Props) {
@@ -25,7 +25,7 @@ function GridItem({ item, toShow, height, weight }: Props) {
         ? <p className={styles.boxTextBigger}>O valor do seu IMC é: <strong>{imcResult} Kg/m²</strong></p>
         : <p className={styles.boxText}>IMC está entre <strong>{minImcValue}</strong> e <strong>{maxImcValue}</strong></p>
       }
-      {imcResult && <LeftArrowReset item={item} setToShow={toShow} setHeight={height} setWeight={weight} />}
+      {imcResult && <LeftArrowReset item={item} toShow={toShow} height={height} weight={weight} />}
     </div>
   )
 }

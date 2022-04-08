@@ -55,7 +55,7 @@ function App() {
 
         <section className={!toShow ? styles.rightSide : styles.rightSideBig}>
           {!toShow && levels.map((item, index) => (
-            <GridItem key={index} item={item} />
+            <GridItem key={index} item={item} toShow={handleToShow} height={handleHeight} weight={handleWeight} />
           ))}
           {toShow && <GridItem item={toShow} toShow={handleToShow} height={handleHeight} weight={handleWeight} />}
         </section>
