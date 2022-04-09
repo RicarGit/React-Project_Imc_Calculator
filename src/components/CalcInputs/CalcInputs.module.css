@@ -1,0 +1,44 @@
+input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgba(150, 163, 171, .5);
+  padding: 10px 2px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+input::placeholder,
+input:disabled {
+  opacity: .3;
+}
+
+.arrowButton {
+  width: 100%;
+  padding: 15px 0;
+  margin-top: 50px;
+  font-size: 15px;
+  background-color: #227C9D;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease .3s;
+}
+
+.arrowButton:disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+
+@media (max-width: 870px) {
+  input {
+    margin: 0;
+    text-align: center;
+  }
+
+  .arrowButton {
+    margin-top: 20px;
+  }
+}
