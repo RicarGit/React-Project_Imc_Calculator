@@ -37,46 +37,6 @@
   color: #6A7D8B;
 }
 
-.leftSide input {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid rgba(150, 163, 171, .5);
-  padding: 10px 2px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  outline: none;
-}
-
-.leftSide input::placeholder {
-  opacity: .3;
-}
-
-.leftSide input:disabled {
-  opacity: .3;
-}
-
-.leftSide button {
-  width: 100%;
-  padding: 15px 0;
-  margin-top: 50px;
-  font-size: 15px;
-  background-color: #227C9D;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all ease .3s;
-}
-
-.leftSide button:hover {
-  opacity: .8;
-}
-
-.leftSide button:disabled {
-  opacity: .3;
-  cursor: default;
-}
-
 .rightSide {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
