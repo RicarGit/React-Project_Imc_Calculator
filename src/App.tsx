@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { levels, Level } from './helpers/imc'
 import styles from './App.module.css'
 import logo from './assets/powered.png'
-import { GridItem } from './components/GridItem/GridItem';
-import CalcInputs from './components/CalcInputs/CalcInputs'
+import { GridItem } from './components/GridItem'
+import { CalcInputs } from './components/CalcInputs'
 
 function App() {
   const [heightField, setHeightField] = useState(0)

@@ -1,7 +1,7 @@
 import up from '../../assets/up.png'
 import down from '../../assets/down.png'
 import styles from './GridItem.module.css'
-import LeftArrowReset from '../ResetArrow/LeftArrowReset'
+import { LeftArrowReset } from '../LeftArrowReset'
 import { Level } from '../../helpers/imc'
 
 type Props = {

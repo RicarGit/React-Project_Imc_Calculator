@@ -46,4 +46,4 @@ const CalcInputs = (
   )
 }
 
-export default CalcInputs
+export { CalcInputs }
