@@ -9,7 +9,7 @@
 ## My first project in ReactJS, first of many! :smile:
 
 
-### Technologies used:
+### Used Technologies:
 
 - Node
   - Yarn
