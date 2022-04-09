@@ -15,7 +15,6 @@ const levels: Level[] = [
 
 const calculateImc = (height: number, weight: number) => {
   const imcCalcResult = parseFloat((weight / (height * 2)).toFixed(1))
-  console.log(imcCalcResult)
 
   const [result] = levels.filter(level => {
     const [minValue, maxValue] = level.imc

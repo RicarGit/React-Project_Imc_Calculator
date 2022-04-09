@@ -4,12 +4,15 @@ import { Props } from '../GridItem/GridItem'
 
 function LeftArrowReset({ item, toShow, height, weight }: Props) {
   return (
-    <button onClick={() => {
-      item.imcResult = undefined
-      height(0)
-      weight(0)
-      toShow(null)
-    }} className={styles.leftArrowContainer}>
+    <button
+      className={styles.leftArrowContainer}
+      onClick={() => {
+        item.imcResult = undefined
+        height(0)
+        weight(0)
+        toShow(null)
+      }}>
+
       <img className={styles.leftArrow} src={leftArrow} alt="" />
     </button>
   )

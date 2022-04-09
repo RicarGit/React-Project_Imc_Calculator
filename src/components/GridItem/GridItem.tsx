@@ -17,15 +17,29 @@ function GridItem({ item, toShow, height, weight }: Props) {
 
   return (
     <div className={styles.boxItem} style={{ backgroundColor }}>
-      <figure className={imcResult ? styles.boxThumbIconBigger : styles.boxThumbIcon}>
-        <img className={imcResult ? styles.thumbIconBigger : styles.thumbIcon} src={icon === 'up' ? up : down} alt="thumbs_image" />
+
+      <figure
+        className={imcResult ? styles.boxThumbIconBigger : styles.boxThumbIcon}>
+        <img
+          className={imcResult ? styles.thumbIconBigger : styles.thumbIcon}
+          src={icon === 'up' ? up : down}
+          alt="thumbs_image" />
       </figure>
-      <h2 className={imcResult ? styles.boxTitleBigger : styles.boxTitle}>{title}</h2>
+
+      <h2
+        className={imcResult ? styles.boxTitleBigger : styles.boxTitle}>{title}
+      </h2>
+
       {imcResult
-        ? <p className={styles.boxTextBigger}>O valor do seu IMC é: <strong>{imcResult} Kg/m²</strong></p>
-        : <p className={styles.boxText}>IMC está entre <strong>{minImcValue}</strong> e <strong>{maxImcValue}</strong></p>
+        ? <p className={styles.boxTextBigger}>O valor do seu IMC é:
+          <strong>{imcResult} Kg/m²</strong></p>
+
+        : <p className={styles.boxText}>IMC está entre
+          <strong>{minImcValue}</strong> e
+          <strong>{maxImcValue}</strong></p>
       }
-      {imcResult && <LeftArrowReset item={item} toShow={toShow} height={height} weight={weight} />}
+      {imcResult && <LeftArrowReset
+        item={item} toShow={toShow} height={height} weight={weight} />}
     </div>
   )
 }
