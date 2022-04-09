@@ -37,7 +37,8 @@ function App() {
             weight={weightField}
             handleToShow={handleToShow}
             handleHeight={handleHeight}
-            handleWeight={handleWeight} />
+            handleWeight={handleWeight}
+          />
         </section>
 
         <section className={!toShow ? styles.rightSide : styles.rightSideBig}>
@@ -47,7 +48,8 @@ function App() {
               item={item}
               toShow={handleToShow}
               height={handleHeight}
-              weight={handleWeight} />
+              weight={handleWeight}
+            />
           ))}
 
           {toShow &&
@@ -55,12 +57,13 @@ function App() {
               item={toShow}
               toShow={handleToShow}
               height={handleHeight}
-              weight={handleWeight} />
+              weight={handleWeight}
+            />
           }
         </section>
 
-      </main >
-    </div >
+      </main>
+    </div>
   )
 }
 

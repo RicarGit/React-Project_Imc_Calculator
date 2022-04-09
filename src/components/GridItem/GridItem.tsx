@@ -27,7 +27,8 @@ function GridItem({ item, toShow, height, weight }: Props) {
       </figure>
 
       <h2
-        className={imcResult ? styles.boxTitleBigger : styles.boxTitle}>{title}
+        className={imcResult ? styles.boxTitleBigger : styles.boxTitle}>
+        {title}
       </h2>
 
       {imcResult
@@ -38,8 +39,10 @@ function GridItem({ item, toShow, height, weight }: Props) {
           <strong>{minImcValue}</strong> e
           <strong>{maxImcValue}</strong></p>
       }
-      {imcResult && <LeftArrowReset
-        item={item} toShow={toShow} height={height} weight={weight} />}
+      {imcResult &&
+        <LeftArrowReset
+          item={item} toShow={toShow} height={height} weight={weight}
+        />}
     </div>
   )
 }
