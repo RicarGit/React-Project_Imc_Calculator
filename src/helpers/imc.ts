@@ -20,14 +20,13 @@ const calculateImc = (height: number, weight: number) => {
     const [minValue, maxValue] = level.imc
 
     if (imcCalcResult >= minValue && imcCalcResult <= maxValue) {
-      level.imcResult = imcCalcResult
       return true
     }
 
     return false
   })
 
-  return result
+  return { ...result, imcResult: imcCalcResult }
 }
 
 export { levels, calculateImc, type Level }
