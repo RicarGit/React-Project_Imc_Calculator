@@ -19,11 +19,7 @@ const calculateImc = (height: number, weight: number) => {
   const [result] = levels.filter(level => {
     const [minValue, maxValue] = level.imc
 
-    if (imcCalcResult >= minValue && imcCalcResult <= maxValue) {
-      return true
-    }
-
-    return false
+    return imcCalcResult >= minValue && imcCalcResult <= maxValue
   })
 
   return { ...result, imcResult: imcCalcResult }
