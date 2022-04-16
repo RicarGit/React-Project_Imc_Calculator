@@ -5,9 +5,9 @@ import { LeftArrowReset } from '../LeftArrowReset'
 import { Level } from '../../helpers/imc'
 
 type Props = {
-  item: Level,
-  toShow: (toShow: Level | null) => void,
-  height: (height: number) => void,
+  item: Level
+  toShow: (toShow: Level | null) => void
+  height: (height: number) => void
   weight: (weight: number) => void
 }
 

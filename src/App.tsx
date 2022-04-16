@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from 'react'
 import { levels, Level } from './helpers/imc'
 import styles from './App.module.css'
 import logo from './assets/powered.png'
@@ -67,4 +67,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
