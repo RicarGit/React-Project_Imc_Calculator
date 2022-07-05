@@ -33,11 +33,11 @@ function GridItem({ item, toShow, height, weight }: Props) {
 
       {imcResult
         ? <p className={styles.boxTextBigger}>O valor do seu IMC é:
-          <strong>{imcResult} Kg/m²</strong></p>
+          <strong> {imcResult} Kg/m²</strong></p>
 
         : <p className={styles.boxText}>IMC está entre
-          <strong>{minImcValue}</strong> e
-          <strong>{maxImcValue}</strong></p>
+          <strong> {minImcValue}</strong> e
+          <strong> {maxImcValue}</strong></p>
       }
       {imcResult &&
         <LeftArrowReset
